@@ -1,10 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Akka.Util.Internal;
 using OpenTelemetry.Exporter;
 using OpenTelemetry.Trace;
 
 namespace OpenTelemetry.Contrib.Testing;
+
+public static class FixtureSupport
+{
+    /// <summary>
+    /// Used to monotonically increment <see cref="ActivitySource"/> names
+    /// </summary>
+    public static readonly AtomicCounter TraceSourceName = new AtomicCounter(0);
+}
 
 /// <summary>
 /// And OpenTelemetry testing fixture
