@@ -27,8 +27,14 @@ public class TraceFixture : IDisposable
     private readonly SimpleActivityExportProcessor _processor;
 
     private readonly string _activitySourceName;
+    
+    public static TraceFixture Create(string activityName = null)
+    {
+        activityName ??= $"Test-{FixtureSupport.TraceSourceName.GetAndIncrement()}";
+        return new TraceFixture(activityName);
+    }
 
-    public TraceFixture(string activitySourceName)
+    private TraceFixture(string activitySourceName)
     {
         _exporter = new InMemoryExporter<Activity>(_activities);
         _processor = new SimpleActivityExportProcessor(_exporter);
