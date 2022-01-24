@@ -1,11 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+<<<<<<< Updated upstream
+=======
+using Akka.Util.Internal;
+>>>>>>> Stashed changes
 using OpenTelemetry.Exporter;
 using OpenTelemetry.Trace;
 
 namespace OpenTelemetry.Contrib.Testing;
 
+<<<<<<< Updated upstream
+=======
+public static class FixtureSupport
+{
+    /// <summary>
+    /// Used to monotonically increment <see cref="ActivitySource"/> names
+    /// </summary>
+    public static readonly AtomicCounter TraceSourceName = new AtomicCounter(0);
+}
+
+>>>>>>> Stashed changes
 /// <summary>
 /// And OpenTelemetry testing fixture
 /// </summary>
