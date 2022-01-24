@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(LibraryFramework)</TargetFramework>
+    <Description>Your description here.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OpenTelemetry.Api" Version="$(OTelVersion)" />
+    <PackageReference Include="OpenTelemetry.Exporter.InMemory " Version="$(OTelVersion)" />
+  </ItemGroup>
+
+</Project>
