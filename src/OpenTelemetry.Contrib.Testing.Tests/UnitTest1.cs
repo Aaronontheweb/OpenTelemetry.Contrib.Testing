@@ -1,7 +1,6 @@
-using System;
 using Xunit;
 
-namespace Petabridge.Library.Tests
+namespace OpenTelemetry.Contrib.Testing.Tests
 {
     public class UnitTest1
     {

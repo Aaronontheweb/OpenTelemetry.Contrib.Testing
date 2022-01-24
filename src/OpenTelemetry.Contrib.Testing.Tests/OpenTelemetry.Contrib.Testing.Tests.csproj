@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Petabridge.Library\Petabridge.Library.csproj" />
+    <ProjectReference Include="..\OpenTelemetry.Contrib.Testing\OpenTelemetry.Contrib.Testing.csproj" />
   </ItemGroup>
 
 </Project>

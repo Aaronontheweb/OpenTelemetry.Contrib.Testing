@@ -1,6 +1,6 @@
-# Petabridge.Library
+# OpenTelemetry.Contrib.Testing
 
-Update this readme file with your details.
+Some testing tools for use with OpenTelemetry in C#.
 
 ## Supported Commands
 This project supports a wide variety of commands, all of which can be listed via:
