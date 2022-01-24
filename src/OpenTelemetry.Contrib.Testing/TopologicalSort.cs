@@ -24,11 +24,11 @@ namespace OpenTelemetry.Contrib.Testing
 
                 // x is the child of y
                 if (x.ParentId == y.Id)
-                    return -1;
+                    return 1;
             
                 // x is the parent of y
                 if (y.ParentId == x.Id)
-                    return 1;
+                    return -1;
             
                 // the spans don't have a direct relationship to each other
                 return 0;
