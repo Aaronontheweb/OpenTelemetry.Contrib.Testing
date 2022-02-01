@@ -1,28 +1,22 @@
 using System;
 using System.Collections.Generic;
-using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Linq;
 using Faker.Helpers;
 using FluentAssertions;
 using FluentAssertions.Execution;
-using FluentAssertions.Formatting;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace OpenTelemetry.Contrib.Testing.Tests
 {
-    public class TopologicalSortSpecs : IDisposable
+    public class TopologicalSortSpecs : OTelSpec
     {
-        public TopologicalSortSpecs(ITestOutputHelper output)
+        public TopologicalSortSpecs(ITestOutputHelper output) : base(output)
         {
-            Traces = TraceFixture.Create();
-            Output = output;
         }
 
-        public ITestOutputHelper Output { get; }
 
-        public TraceFixture Traces { get; }
 
         [Fact]
         public void BasicCase()

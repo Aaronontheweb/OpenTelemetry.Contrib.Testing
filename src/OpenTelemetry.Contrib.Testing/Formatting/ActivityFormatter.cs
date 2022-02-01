@@ -17,8 +17,8 @@ public sealed class ActivityFormatter : IValueFormatter
         var parentOp = x.Parent != null ? $"({x.Parent.OperationName})" : string.Empty;
         var result = $"[TraceId: {x.Context.TraceId}][SpanId: {x.Context.SpanId}] {x.OperationName}";
         var parentStr = $"[ParentId: {x.ParentId}] {parentOp}";
-        if (context.UseLineBreaks)
-        {
+        // if (context.UseLineBreaks)
+        // {
             if (x.ParentId != null)
             {
                 using (formattedGraph.WithIndentation())
@@ -31,17 +31,17 @@ public sealed class ActivityFormatter : IValueFormatter
             {
                 formattedGraph.AddLine(result);
             }
-        }
-        else
-        {
-            if (x.ParentId != null)
-            {
-                formattedGraph.AddFragment(result + parentStr);
-            }
-            else
-            {
-                formattedGraph.AddFragment(result);
-            }
-        }
+        // }
+        // else
+        // {
+        //     if (x.ParentId != null)
+        //     {
+        //         formattedGraph.AddFragment(result + parentStr);
+        //     }
+        //     else
+        //     {
+        //         formattedGraph.AddFragment(result);
+        //     }
+        // }
     }
 }
