@@ -44,6 +44,9 @@ namespace OpenTelemetry.Contrib.Testing
                         // use via the SpanIds - might not be stable (in relativistic terms)
                         return string.Compare(x.OperationName, y.OperationName, StringComparison.Ordinal);
                     }
+                    
+                    // have to reverse chronological order it.
+                    return -1 * startCmp;
                 }
             
                 // the spans don't have a direct relationship to each other
