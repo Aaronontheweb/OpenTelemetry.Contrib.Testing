@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Akka" Version="1.4.32" />
-    <PackageReference Include="FluentAssertions" Version="6.4.0" />
+    <PackageReference Include="FluentAssertions" Version="6.8.0" />
     <PackageReference Include="OpenTelemetry.Api" Version="$(OTelVersion)" />
     <PackageReference Include="OpenTelemetry.Exporter.InMemory " Version="$(OTelVersion)" />
   </ItemGroup>
